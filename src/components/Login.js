@@ -1,8 +1,11 @@
 import React, {useContext} from 'react';
-import {Button, Container, Grid} from "@material-ui/core";
+
 import Box from "@material-ui/core/Box";
 import {Context} from "../index";
 import firebase from "firebase";
+import Container from "@material-ui/core/Container";
+import Grid from "@material-ui/core/Grid";
+import Button from "@material-ui/core/Button";
 
 
 const Login = () => {
@@ -27,7 +30,7 @@ const Login = () => {
                       direction={"column"}
                 >
                     <Box p={5}>
-                        <Button onClick={login} variant={"outlined"}>Войти с помощью Google</Button>
+                        <Button onClick={login} variant={"outlined"}>Увійти за допомогою Google</Button>
                     </Box>
                 </Grid>
             </Grid>

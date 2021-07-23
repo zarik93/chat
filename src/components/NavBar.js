@@ -7,19 +7,19 @@ import {LOGIN_ROUTE} from "../utils/consts";
 import {Context} from "../index";
 import {useAuthState} from "react-firebase-hooks/auth";
 
-const Navbar = () => {
+const NavBar = () => {
     const {auth} = useContext(Context)
     const [user] = useAuthState(auth)
 
     return (
         <AppBar color={"secondary"} position="static">
-            <Toolbar variant={"dense"}>
+            <Toolbar>
                 <Grid container justify={"flex-end"}>
                     {user ?
                         <Button onClick={() => auth.signOut()} variant={"outlined"}>Выйти</Button>
                         :
                         <NavLink to={LOGIN_ROUTE}>
-                            <Button variant={"outlined"}>Логин</Button>
+                            <Button variant={"outlined"}>Логін</Button>
                         </NavLink>
                     }
                 </Grid>
@@ -28,4 +28,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default NavBar;
